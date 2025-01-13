@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.sinlord.aatmobile">
+
+    <!-- 声明网络权限（用于 Socket 通信） -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <application
+        android:allowBackup="true"
+        android:label="attmobile"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+
+        <!-- 主 Activity -->
+        <activity android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!-- 后台服务 -->
+        <service android:name=".MainService" />
+    </application>
+</manifest>
